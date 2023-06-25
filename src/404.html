@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<title>SharpIce 个人站点 | 404</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			background-color: mediumseagreen;
+			top: 50%;
+			left: 50%;
+			display: flex;
+			position: fixed;
+			transform: translate(-50%, -50%);
+		}
+
+		body * {
+			margin: auto 1rem;
+		}
+
+		.Vertical::before {
+			content: "";
+			position: absolute;
+			height: 10rem;
+			min-width: 2px;
+			animation: VerticalAnimation 1s;
+			background-color: black;
+			transform: translate(0, -50%);
+		}
+
+		@keyframes VerticalAnimation {
+			0% {
+				height: 0;
+			}
+
+			100% {
+				height: 10rem;
+			}
+		}
+
+		/* https://github.com/kobe-koto/kobe-koto.github.io/blob/main/static/css/main.css */
+		@keyframes TextAnimationLeft {
+			0% {
+				opacity: 0;
+				transform: translateX(-1rem)
+			}
+
+			100% {
+				opacity: 1;
+				transform: translateX(0)
+			}
+		}
+
+		@keyframes TextAnimationRight {
+			0% {
+				opacity: 0;
+				transform: translateX(1rem)
+			}
+
+			100% {
+				opacity: 1;
+				transform: translateX(0)
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<strong style="animation: TextAnimationLeft 1s;">似乎来到了一个奇怪的地方</strong>
+	<i class="Vertical"></i>
+	<strong style="animation: TextAnimationRight 1s;">404 ！</strong>
+</body>
+
+</html>
