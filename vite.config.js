@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite';
-import { NodePackage, BuildNodePackage } from './tools/shared.js';
-import fs from 'fs';
+import { build } from './tools/shared/shared.js';
 
 export default defineConfig({
 	root: 'src/',
@@ -10,18 +9,14 @@ export default defineConfig({
 		port: 8050,
 		strictPort: true
 	},
+	build: {
+		outDir: '../.cache'
+	},
 	plugins: [
 		{
-			name: 'inject-debug',
+			name: 'inject',
 			transformIndexHtml(html) {
-				const bootstrapData = fs.readFileSync(NodePackage('bootstrap', 'dist/css/bootstrap.min.css'));
-
-				const injectData = `
-				<debug style="display: none;">
-					${BuildNodePackage()}
-				</debug>
-				`;
-				return html.replace('</html>', `${injectData}</html>`);
+				return build.BuildHTML(html, true);
 			}
 		}
 	]

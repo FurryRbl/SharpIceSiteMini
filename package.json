@@ -1,34 +1,42 @@
 {
-  "name": "sharpice_site-mini",
-  "version": "1.0.0",
-  "description": "SharpIce 个人站点",
-  "license": "MIT",
-  "type": "module",
-  "private": true,
-  "repository": "https://github.com:FurryRbl/SharpIceSiteMini.git",
-  "homepage": "https://github.com:FurryRbl/SharpIceSiteMini",
-  "bugs": "https://github.com:FurryRbl/SharpIceSiteMini/issues",
-  "author": {
-    "name": "SharpIce",
-    "email": "VupRbl@163.com",
-    "url": "https://SharpIce.top"
-  },
-  "engines": {
-    "node": ">=18"
-  },
-  "scripts": {
-    "dev": "vite dev",
-    "build": "node tools/build.js",
-    "clean": "rimraf build node_modules/.vite"
-  },
-  "devDependencies": {
-    "critters": "^0.0.19",
-    "fs-extra": "^11.1.1",
-    "html-minifier": "^4.0.0",
-    "rimraf": "^5.0.1",
-    "vite": "^4.3.9"
-  },
-  "dependencies": {
-    "bootstrap": "^5.3.0"
-  }
+	"name": "sharpice_site-mini",
+	"version": "1.0.0",
+	"description": "SharpIce 个人站点,单 HTML 版",
+	"license": "MIT",
+	"type": "module",
+	"private": true,
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/FurryRbl/SharpIceSiteMini.git"
+	},
+	"homepage": "https://github.com/FurryRbl/SharpIceSiteMini",
+	"bugs": {
+		"url": "https://github.com/FurryRbl/SharpIceSiteMini/issues"
+	},
+	"author": {
+		"name": "SharpIce",
+		"email": "VupRbl@163.com",
+		"url": "https://SharpIce.top"
+	},
+	"engines": {
+		"node": ">=18"
+	},
+	"scripts": {
+		"dev": "vite dev",
+		"build": "node tools/build.js",
+		"clean": "rimraf build node_modules/.vite .cache"
+	},
+	"devDependencies": {
+		"cheerio": "^1.0.0-rc.12",
+		"critters": "^0.0.19",
+		"fs-extra": "^11.1.1",
+		"html-minifier": "^4.0.0",
+		"prettier": "^3.0.0",
+		"rimraf": "^5.0.1",
+		"vite": "^4.3.9"
+	},
+	"dependencies": {
+		"bootstrap": "^5.3.0",
+		"jquery": "~3.7.0"
+	}
 }

@@ -5,23 +5,23 @@
 	<title>SharpIce 个人站点</title>
 	<meta charset="UTF-8" />
 	<meta name="keywords" content="SharpIce, 锐冰龙, Furry" />
-	<meta name="copyright" content="SharpIce 的个人站点">
-	<meta name="description" content="NodeJS 学习" />
+	<meta name="copyright" content="Copyright (c) 2023 SharpIce@MIT License">
+	<meta name="description" content="SharpIce 的个人站点" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- https://fontawesome.com/icons/paw?f=classic&s=solid -->
-	<link rel="icon"
-		href="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20height=%221em%22%20viewBox=%220%200%20512%20512%22%3E%3C!--!%20Font%20Awesome%20Free%206.4.0%20by%20@fontawesome%20-%20https://fontawesome.com%20License%20-%20https://fontawesome.com/license%20(Commercial%20License)%20Copyright%202023%20Fonticons,%20Inc.%20--%3E%3Cpath%20d=%22M226.5%2092.9c14.3%2042.9-.3%2086.2-32.6%2096.8s-70.1-15.6-84.4-58.5s.3-86.2%2032.6-96.8s70.1%2015.6%2084.4%2058.5zM100.4%20198.6c18.9%2032.4%2014.3%2070.1-10.2%2084.1s-59.7-.9-78.5-33.3S-2.7%20179.3%2021.8%20165.3s59.7%20.9%2078.5%2033.3zM69.2%20401.2C121.6%20259.9%20214.7%20224%20256%20224s134.4%2035.9%20186.8%20177.2c3.6%209.7%205.2%2020.1%205.2%2030.5v1.6c0%2025.8-20.9%2046.7-46.7%2046.7c-11.5%200-22.9-1.4-34-4.2l-88-22c-15.3-3.8-31.3-3.8-46.6%200l-88%2022c-11.1%202.8-22.5%204.2-34%204.2C84.9%20480%2064%20459.1%2064%20433.3v-1.6c0-10.4%201.6-20.8%205.2-30.5zM421.8%20282.7c-24.5-14-29.1-51.7-10.2-84.1s54-47.3%2078.5-33.3s29.1%2051.7%2010.2%2084.1s-54%2047.3-78.5%2033.3zM310.1%20189.7c-32.3-10.6-46.9-53.9-32.6-96.8s52.1-69.1%2084.4-58.5s46.9%2053.9%2032.6%2096.8s-52.1%2069.1-84.4%2058.5z%22/%3E%3C/svg%3E">
+	<script type="module" src="js/script.js"></script>
 </head>
 
 <body>
-	<div id="notEnabledJavaScript" class="AdaptiveCentering"> <!-- 不支持或未启用 JavaScript -->
-		<p>浏览器未启用或不支持 JavaScript ！</p>
-		<p>JavaScript is not enabled or supported by the browser!</p>
-	</div>
-	<div id="UnsupportedBrowsers" class="notDisplay AdaptiveCentering"> <!-- 不支持的浏览器 -->
-		<p>不支持的浏览器！</p>
-		<p>Unsupported browsers!</p>
+	<div class="text-white ">
+		<div id="notEnabledJavaScript" class="AdaptiveCentering backgroundDarken z-3"> <!-- 不支持或未启用 JavaScript -->
+			<p>浏览器未启用或不支持 JavaScript ！</p>
+			<p>JavaScript is not enabled or supported by the browser!</p>
+		</div>
+		<div id="UnsupportedBrowsers" class="d-none AdaptiveCentering backgroundDarken z-3"> <!-- 不支持的浏览器 -->
+			<p>不支持的浏览器！</p>
+			<p>Unsupported browsers!</p>
+		</div>
 	</div>
 	<main>
 		<main id="Main" class="container border border-2 card flex-row justify-content-evenly align-items-center">
@@ -31,33 +31,22 @@
 </body>
 
 <style>
-	.notDisplay {
-		display: none;
-	}
-
 	.AdaptiveCentering {
+		width: 100%;
+		height: 100%;
 		top: 50%;
 		left: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		position: fixed;
+		flex-direction: column;
 		transform: translate(-50%, -50%);
 	}
-</style>
 
-<script>
-	function isIE() {	// 判断是否为IE浏览器
-		const userAgent = window.navigator.userAgent;
-		const msie = userAgent.indexOf('MSIE ');
-		const trident = userAgent.indexOf('Trident/');
-		return (msie > -1 || trident > -1);
+	.backgroundDarken {
+		background-color: rgba(0, 0, 0, 0.8);
 	}
-
-	// 在页面加载完成后执行检测
-	window.onload = function () {
-		document.getElementById("notEnabledJavaScript").style.display = "none"; // 不支持或未启用 JavaScript
-		if (isIE()) {
-			document.getElementById("UnsupportedBrowsers").style.display = "unset"; // 不支持的浏览器
-		}
-	};
-</script>
+</style>
 
 </html>
