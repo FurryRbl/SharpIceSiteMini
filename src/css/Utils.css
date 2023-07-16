@@ -1,0 +1,65 @@
+ /* 变量 */
+ :root {
+ 	--text-blue-1: rgb(0, 150, 255);
+	 --color-22: #222;
+	 --color-eee: #eee;
+ }
+
+ /* 大型样式 */
+ .AdaptiveCentering {
+ 	width: 100%;
+ 	height: 100%;
+ 	top: 50%;
+ 	left: 50%;
+ 	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+ 	position: fixed;
+ 	flex-direction: column;
+ 	transform: translate(-50%, -50%);
+ }
+
+ .backgroundDarken {
+ 	background-color: rgba(0, 0, 0, 0.8);
+ }
+
+
+ /* 通用样式 */
+ .text-blue-1 {
+ 	color: var(--text-blue-1);
+ }
+
+
+ /* 装饰样式 */
+ .Indicator {
+ 	position: relative;
+ 	padding-left: 1rem;
+ }
+
+ .Indicator::after {
+ 	content: "";
+ 	width: 5px;
+ 	height: 80%;
+ 	position: absolute;
+ 	left: 0;
+ 	top: 50%;
+ 	transform: translateY(-50%);
+ 	border-radius: 3px;
+ 	background-color: var(--text-blue-1);
+ }
+
+ .Indicator:hover::after {
+ 	animation: Indicator 0.5s;
+ }
+
+ /* 动画 */
+ /* Indicator */
+ @keyframes Indicator {
+ 	0% {
+ 		height: 0%;
+ 	}
+
+ 	100% {
+ 		height: 80%;
+ 	}
+ }

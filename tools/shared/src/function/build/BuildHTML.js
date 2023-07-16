@@ -25,7 +25,7 @@ export function BuildHTML(HTML, debug) {
 			parser: 'html',
 			tabWidth: 4,
 			useTabs: true,
-			printWidth: 1000
+			printWidth: 5000
 		});
 	}
 

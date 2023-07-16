@@ -1,52 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh">
+	<head>
+		<title>SharpIce 个人站点</title>
+		<meta charset="UTF-8" />
+		<meta name="keywords" content="SharpIce, 锐冰龙, Furry" />
+		<meta name="copyright" content="Copyright (c) 2023 SharpIce@MIT License" />
+		<meta name="description" content="SharpIce 的个人站点" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script type="module" src="js/script.js"></script>
+	</head>
 
-<head>
-	<title>SharpIce 个人站点</title>
-	<meta charset="UTF-8" />
-	<meta name="keywords" content="SharpIce, 锐冰龙, Furry" />
-	<meta name="copyright" content="Copyright (c) 2023 SharpIce@MIT License">
-	<meta name="description" content="SharpIce 的个人站点" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script type="module" src="js/script.js"></script>
-</head>
-
-<body>
-	<div class="text-white ">
-		<div id="notEnabledJavaScript" class="AdaptiveCentering backgroundDarken z-3"> <!-- 不支持或未启用 JavaScript -->
-			<p>浏览器未启用或不支持 JavaScript ！</p>
-			<p>JavaScript is not enabled or supported by the browser!</p>
+	<body>
+		<div class="text-white">
+			<noscript id="notEnabledJavaScript" class="AdaptiveCentering backgroundDarken z-3">
+				<!-- 不支持或未启用 JavaScript -->
+				<p>浏览器未启用或不支持 JavaScript ！</p>
+				<p>JavaScript is not enabled or supported by the browser!</p>
+			</noscript>
+			<div id="UnsupportedBrowsers" class="d-none AdaptiveCentering backgroundDarken z-3">
+				<!-- 不支持的浏览器 -->
+				<p>不支持的浏览器！</p>
+				<p>Unsupported browsers!</p>
+			</div>
 		</div>
-		<div id="UnsupportedBrowsers" class="d-none AdaptiveCentering backgroundDarken z-3"> <!-- 不支持的浏览器 -->
-			<p>不支持的浏览器！</p>
-			<p>Unsupported browsers!</p>
-		</div>
-	</div>
-	<main>
-		<main id="Main" class="container border border-2 card flex-row justify-content-evenly align-items-center">
-			<h1>Hello World</h1>
+		<header id="Header" class="border-bottom border-2 d-flex mt-2 justify-content-center align-items-center">
+			<h3 class="text-blue-1 mx-5">SharpIce</h3>
+			<nav class="d-flex">
+				<a class="Indicator" href="?Pages=Home">主页</a>
+				<a class="Indicator" href="?Pages=Contact">联系我</a>
+				<a class="Indicator" href="?Pages=FirendshipLink">主页</a>
+			</nav>
+		</header>
+		<main id="Main" class="">
+			<div id="Left"></div>
+			<div id="Center" class="border border-2 border-bottom-0 border-top-0"></div>
+			<div id="Right"></div>
 		</main>
-	</main>
-</body>
-
-<style>
-	.AdaptiveCentering {
-		width: 100%;
-		height: 100%;
-		top: 50%;
-		left: 50%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		position: fixed;
-		flex-direction: column;
-		transform: translate(-50%, -50%);
-	}
-
-	.backgroundDarken {
-		background-color: rgba(0, 0, 0, 0.8);
-	}
-</style>
-
+	</body>
 </html>

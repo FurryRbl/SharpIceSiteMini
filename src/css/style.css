@@ -1,0 +1,35 @@
+@import url('./Utils.css');
+
+body * {
+	color: var(--color-eee);
+}
+
+body {
+	background-color: var(--color-22);
+}
+
+#Header a {
+	text-decoration: none;
+	margin: auto 0.5rem;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+#Main {
+	display: flex;
+}
+
+#Main #Left,
+#Main #Right {
+	width: 30%;
+}
+
+#Main #Left,
+#Main #Center,
+#Main #Right {
+	height: 20rem;
+}
+
+#Main #Center {
+	width: 100%;
+}

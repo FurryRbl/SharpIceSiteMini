@@ -24,7 +24,8 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "node tools/build.js",
-		"clean": "rimraf build node_modules/.vite .cache"
+		"clean": "rimraf build node_modules/.vite .cache",
+		"prettier": "prettier --write ."
 	},
 	"devDependencies": {
 		"cheerio": "^1.0.0-rc.12",
@@ -33,10 +34,11 @@
 		"html-minifier": "^4.0.0",
 		"prettier": "^3.0.0",
 		"rimraf": "^5.0.1",
-		"vite": "^4.3.9"
+		"vite": "^4.4.4"
 	},
 	"dependencies": {
-		"bootstrap": "^5.3.0",
-		"jquery": "~3.7.0"
+		"bootstrap": "~5.3.0",
+		"jquery": "~3.7.0",
+		"normalize.css": "~8.0.1"
 	}
 }
