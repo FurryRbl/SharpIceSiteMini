@@ -1,37 +1,36 @@
 name: Deploy
 
 on:
-  push:
-    branches: ["main"]
+    push:
+        branches: ["main"]
 
 permissions:
-  pages: write
-  id-token: write
+    pages: write
+    id-token: write
 
 jobs:
-  Build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: 迁出文件
-        uses: actions/checkout@v3
+    Build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: 迁出文件
+              uses: actions/checkout@v3
 
-      - name: 获取NodeJS
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
+            - name: 获取NodeJS
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 18
 
-      - name: 初始化部署环境
-        run: yarn
+            - name: 初始化部署环境
+              run: yarn
 
-      - name: 构建项目
-        run: yarn build
+            - name: 构建项目
+              run: yarn build
 
-      - name: 上传构建结果
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: "build"
+            - name: 上传构建结果
+              uses: actions/upload-pages-artifact@v1
+              with:
+                  path: "build"
 
-      - name: 部署到Github页面
-        id: deployment
-        uses: actions/deploy-pages@v2
-
+            - name: 部署到Github页面
+              id: deployment
+              uses: actions/deploy-pages@v2

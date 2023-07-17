@@ -1,6 +1,6 @@
 import "normalize.css/normalize.css";
 import "bootstrap/dist/css/bootstrap.css";
-import '../css/style.css'
+import "../css/style.css";
 import { SharpIce } from "./utils.js";
 import jquery from "jquery";
 

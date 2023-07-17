@@ -1,4 +1,4 @@
-import { minify } from 'html-minifier';
+import { minify } from "html-minifier";
 
 export function CodeCompression(HTML) {
 	const minifyOptions = {
@@ -10,7 +10,7 @@ export function CodeCompression(HTML) {
 		removeOptionalTags: true,
 		minifyURLs: true,
 		minifyCSS: true,
-		minifyJS: true
+		minifyJS: true,
 	};
 	HTML = minify(HTML, minifyOptions); // 压缩代码
 	return HTML;

@@ -1,3 +1,7 @@
 {
-	"cSpell.words": ["sharpice"]
+	"cSpell.words": ["sharpice", "cherrio", "linebreak"],
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	}
 }

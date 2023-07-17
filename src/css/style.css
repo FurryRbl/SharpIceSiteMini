@@ -1,4 +1,4 @@
-@import url('./Utils.css');
+@import url("./Utils.css");
 
 body * {
 	color: var(--color-eee);
