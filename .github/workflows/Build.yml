@@ -27,7 +27,7 @@ jobs:
               run: yarn build
 
             - name: 上传构建结果
-              uses: actions/upload-pages-artifact@v1
+              uses: actions/upload-pages-artifact@v2
               with:
                   path: "build"
 
